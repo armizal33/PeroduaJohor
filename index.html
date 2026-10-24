@@ -565,41 +565,87 @@
             line-height: 1.6;
         }
 
+        
+/* =========================
+   KOTAK KELAYAKAN PEKERJAAN
+========================= */
 
-<!-- KELAYAKAN PEKERJAAN -->
-<section class="job-eligibility">
+.job-eligibility {
+    padding: 35px 6%;
+    background: #f5f7f6;
+}
 
-    <div class="job-eligibility-grid">
+.job-eligibility-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+    max-width: 1200px;
+    margin: auto;
+}
 
-        <div class="job-eligibility-box">
-            <span>💼</span>
-            KERJA SWASTA
-        </div>
+.job-eligibility-box {
+    background: linear-gradient(135deg, #006b31, #00843d);
+    color: #ffffff;
+    border: 2px solid #d4af37;
+    border-radius: 15px;
+    padding: 22px 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 800;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.25);
+    animation: goldHeartbeat 2.2s ease-in-out infinite;
+    transition: box-shadow 0.3s ease;
+}
 
-        <div class="job-eligibility-box">
-            <span>🇸🇬</span>
-            KERJA SINGAPORE
-        </div>
+.job-eligibility-box span {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
 
-        <div class="job-eligibility-box">
-            <span>🏢</span>
-            KERJA KERAJAAN
-        </div>
+.job-eligibility-box:hover {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.7);
+}
 
-        <div class="job-eligibility-box">
-            <span>🧑‍💻</span>
-            KERJA SENDIRI
-        </div>
+@keyframes goldHeartbeat {
+    0%, 100% {
+        transform: scale(1);
+        border-color: #b8962e;
+        box-shadow: 0 0 8px rgba(212, 175, 55, 0.25);
+    }
 
-        <div class="job-eligibility-box">
-            <span>🚗</span>
-            GRAB / E-HAILING
-        </div>
+    50% {
+        transform: scale(1.025);
+        border-color: #ffe680;
+        box-shadow: 0 0 17px rgba(255, 215, 0, 0.6);
+    }
+}
 
-    </div>
+@media (max-width: 1000px) {
+    .job-eligibility-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
 
-</section>
+@media (max-width: 600px) {
+    .job-eligibility {
+        padding: 25px 5%;
+    }
 
+    .job-eligibility-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .job-eligibility-box {
+        font-size: 14px;
+        padding: 18px 6px;
+    }
+
+    .job-eligibility-box span {
+        font-size: 26px;
+    }
+}
 
         /* =========================
            WHY CHOOSE
@@ -1499,6 +1545,39 @@
 
     </section>
 
+        <!-- KELAYAKAN PEKERJAAN -->
+    <section class="job-eligibility">
+
+        <div class="job-eligibility-grid">
+
+            <div class="job-eligibility-box">
+                <span>💼</span>
+                KERJA SWASTA
+            </div>
+
+            <div class="job-eligibility-box">
+                <span>🇸🇬</span>
+                KERJA SINGAPORE
+            </div>
+
+            <div class="job-eligibility-box">
+                <span>🏢</span>
+                KERJA KERAJAAN
+            </div>
+
+            <div class="job-eligibility-box">
+                <span>🧑‍💻</span>
+                KERJA SENDIRI
+            </div>
+
+            <div class="job-eligibility-box">
+                <span>🚗</span>
+                GRAB / E-HAILING
+            </div>
+
+        </div>
+
+    </section>
 
     <!-- =========================
          WHY CHOOSE MIZAL
